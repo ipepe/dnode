@@ -1,0 +1,22 @@
+version: '2'
+services:
+  ssl:
+    environment:
+      - PROXYPASS_HOST=app
+      - LETSENCRYPT_EMAIL=letsencrypt@ipepe.pl
+      - VIRTUAL_HOSTS=app.ipepe.pl
+    image: ipepe/nginx-ssl-companion
+    ports:
+      - "5080:80"
+      - "5443:443"
+    links:
+      - "app"
+  app:
+    image: ipepe/dnode:staging
+    restart: always
+    ports:
+     - "5022:22"
+    volumes:
+      - ./data:/data
+
+# docker-compose up
