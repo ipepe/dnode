@@ -5,7 +5,7 @@ RUN rm -f /etc/service/sshd/down
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 RUN rm /etc/my_init.d/00_regen_ssh_host_keys.sh
 
-ENV PASSENGER_APP_ENV=staging
+ENV PASSENGER_APP_ENV=production
 
 # configure nginx
 ADD src/webapp.conf /etc/nginx/sites-enabled/webapp.conf
