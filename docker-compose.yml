@@ -12,7 +12,7 @@ services:
     links:
       - "app"
   app:
-    image: ipepe/dnode:staging
+    image: ipepe/dnode:production
     restart: always
     ports:
      - "5022:22"
