@@ -18,6 +18,5 @@ services:
      - "5022:22"
     volumes:
       - ./data/webapp:/home/app/webapp
-      - ./data/ssh:/home/app/.ssh
 
 # docker-compose up

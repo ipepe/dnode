@@ -1,4 +1,3 @@
 #!/bin/bash
-chown -R app:app /home/app
-chmod -R 600 /home/app/.ssh
+chown -R app:app /home/app &
 exit 0
