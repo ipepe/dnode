@@ -17,6 +17,7 @@ services:
     ports:
      - "5022:22"
     volumes:
-      - ./data:/data
+      - ./data/webapp:/home/app/webapp
+      - ./data/ssh:/home/app/.ssh
 
 # docker-compose up
